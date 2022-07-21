@@ -20,14 +20,31 @@ export default function Navbar(props) {
           <Link className="nav-link active" to="/About">{props.aboutText}</Link>
         </li>
       </ul>
-      <div className={`form-check form-switch text-${props.mode === 'light'?'dark':'light'} px-4`}>
+      {/* <div className="d-flex"></div>
+      <div className="bg-primary rounded mx-2" onClick={()=>{props.toggleMode('primary')}}
+       style ={{height : '25px' , width : '25px' , cursor: 'pointer'}}></div>
+      <div className="bg-danger rounded mx-2" onClick={()=>{props.toggleMode('danger')}}
+       style ={{height : '25px' , width : '25px' , cursor: 'pointer'}}></div>
+      <div className="bg-success rounded mx-2" onClick={()=>{props.toggleMode('success')}}
+       style ={{height : '25px' , width : '25px' , cursor: 'pointer'}}></div>
+      <div className="bg-warning rounded mx-2" onClick={()=>{props.toggleMode('warning')}}
+       style ={{height : '25px' , width : '25px' , cursor: 'pointer'}}></div>
+       <div className="bg-light rounded mx-2" onClick={()=>{props.toggleMode('light')}}
+       style ={{height : '25px' , width : '25px' , cursor: 'pointer'}}></div>
+       <div className="bg-dark rounded mx-2" onClick={()=>{props.toggleMode('dark')}}
+       style ={{height : '25px' , width : '25px' , cursor: 'pointer'}}></div> */}
+
+
+
+
+      <div className={`form-check form-switch text-${props.mode === 'light'?'dark':'light'} px-2`}>
         <input className="form-check-input" onClick={props.toggleMode} type="checkbox" role="button" id="flexSwitchCheckDefault"/>
         <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Enable Dark Mode</label>
       </div>
-      <form className="d-flex" role="search">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+      {/* <form className="d-flex" role="search">
+        <input className="form-control mx-2" type="search" placeholder="Search" aria-label="Search" />
         <button className="btn btn-primary" type="submit">Search</button>
-      </form>
+      </form> */}
       
     </div>
   </div>
